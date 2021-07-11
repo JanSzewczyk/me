@@ -1,6 +1,13 @@
-# Getting Started with Create React App
+[![Build Status](https://travis-ci.com/JanSzewczyk/me.svg?branch=master)](https://travis-ci.com/JanSzewczyk/me)
+![GitHub last commit](https://img.shields.io/github/last-commit/janszewczyk/me)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/janszewczyk/me)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/janszewczyk/me/react)
+![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/janszewczyk/me/typescript)
+
+
+
+# My portfolio app 
 
 ## Available Scripts
 
