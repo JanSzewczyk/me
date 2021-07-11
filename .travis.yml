@@ -1,19 +1,35 @@
+#language: node_js
+#node_js:
+#  - 14
+#cache: npm
+#
+#install:
+#  - npm install
+#
+#script:
+#  - npm test
+#  - npm run-script build
+#
+#deploy:
+#  provider: pages
+#  skip_cleanup: true
+#  github-token: $GITHUB_TOKEN
+#  local_dir: build
+#  on:
+#    branch: master
+
 language: node_js
 node_js:
-  - 14
-cache: npm
-
-install:
-  - npm install
-
+  - "stable"
+cache:
+  directories:
+    - node_modules
 script:
-  - npm test
-  - npm run-script build
-
+  - npm run build
 deploy:
   provider: pages
   skip_cleanup: true
-  github-token: $GITHUB_TOKEN
+  github_token: $github_token
   local_dir: build
   on:
     branch: master
