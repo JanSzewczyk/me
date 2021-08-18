@@ -1,14 +1,21 @@
+import { useTranslation } from "react-i18next";
+
 import logo from "./logo.svg";
 import "./App.css";
 
-function App() {
+const App = () => {
+  const { t } = useTranslation(["translation"]);
+
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
+          {t("title")}
+          <br />
           Jan Robert Szewczyk
-          <br/>
+          <br />
           The Best Web Developer
         </p>
         <a
@@ -22,6 +29,6 @@ function App() {
       </header>
     </div>
   );
-}
+};
 
 export default App;
