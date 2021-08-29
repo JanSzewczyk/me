@@ -1,17 +1,21 @@
 import React, { Suspense } from "react";
 import ReactDOM from "react-dom";
+import { ThemeProvider } from "styled-components";
 
+import { GlobalStyle } from "./styles";
+import { defaultTheme } from "./config/theme";
 import reportWebVitals from "./reportWebVitals";
-import "./i18n";
+import "./config/i18n";
 
 import App from "./App";
-
-import "./index.css";
 
 ReactDOM.render(
   <React.StrictMode>
     <Suspense fallback={null}>
-      <App />
+      <ThemeProvider theme={defaultTheme}>
+        <App />
+        <GlobalStyle />
+      </ThemeProvider>
     </Suspense>
   </React.StrictMode>,
   document.getElementById("root")
