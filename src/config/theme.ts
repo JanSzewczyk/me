@@ -2,6 +2,7 @@ export type ThemeType = typeof defaultTheme;
 
 export const defaultTheme = {
   palette: {
+    headerBackgroundColor: "#0c0c0c",
     appBackgroundColor: "#181818",
     scrollbarThumbColor: "#4e4e4e",
 

@@ -27,7 +27,7 @@ const SkillsContent: FC = () => {
           <SkillsTitle>Frontend Developer</SkillsTitle>
           <SkillsSubtitle>asdasd fasdf asdasd</SkillsSubtitle>
         </div>
-        <SkillsArrow isopened={isOpen}>
+        <SkillsArrow isOpen={isOpen}>
           <FaAngleDown />
         </SkillsArrow>
       </SkillsHeader>

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { grid } from "../../../styles";
-import { FaAngleDown, FaCode } from "react-icons/all";
+import { FaCode } from "react-icons/all";
 
 export const SkillsContentContainer = styled.div``;
 
@@ -36,14 +36,14 @@ export const SkillsSubtitle = styled.span`
 `;
 
 interface SkillsArrowProps {
-  isopened: boolean;
+  isOpen: boolean;
 }
 export const SkillsArrow = styled.div<SkillsArrowProps>`
   font-size: 2rem;
   color: ${({ theme }) => theme.palette.primaryColor};
   margin-left: auto;
   transition: 0.4s;
-  transform: rotate(${({ isopened }) => (isopened ? "-180deg" : "0deg")});
+  transform: rotate(${({ isOpen }) => (isOpen ? "-180deg" : "0deg")});
 `;
 
 interface SkillsListProps {

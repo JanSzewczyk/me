@@ -4,13 +4,15 @@ import { initReactI18next } from "react-i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 
 import translationEN from "locales/en/translation.json";
+import qualificationEN from "locales/en/qualification.json";
 import translationPL from "locales/pl/translation.json";
 
 export const defaultNS = "translation";
 
 export const resources = {
   en: {
-    translation: translationEN
+    translation: translationEN,
+    qualification: qualificationEN
   },
   pl: {
     translation: translationPL

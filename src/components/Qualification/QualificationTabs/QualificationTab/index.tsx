@@ -14,56 +14,42 @@ import {
 interface QualificationTabProps {
   buttonIcon: ReactNode;
   buttonName: string;
+  qualifications: {
+    title: string;
+    subtitle: string;
+    date: string;
+  }[];
 }
 
-const QualificationTab: FC<PropsWithChildren<QualificationTabProps>> = () => {
+const QualificationTab: FC<PropsWithChildren<QualificationTabProps>> = ({ qualifications }) => {
   return (
     <QualificationContent data-content>
-      <QualificationData>
-        <div>
-          <QualificationTitle>Computer Science</QualificationTitle>
-          <QualificationSubtitle>Poland - Cracow RP</QualificationSubtitle>
-          <QualificationCalendar>
-            <FaCalendarAlt />
-            2000 - 2500
-          </QualificationCalendar>
-        </div>
-        <div>
-          <QualificationRounder />
-          <QualificationLine />
-        </div>
-      </QualificationData>
+      {qualifications.map((qualification, index) => {
+        const emptyTag = <div />;
+        const qualificationData = (
+          <div>
+            <QualificationTitle>{qualification.title}</QualificationTitle>
+            <QualificationSubtitle>{qualification.subtitle}</QualificationSubtitle>
+            <QualificationCalendar>
+              <FaCalendarAlt />
+              {qualification.date}
+            </QualificationCalendar>
+          </div>
+        );
 
-      <QualificationData>
-        <div />
-        <div>
-          <QualificationRounder />
-          <QualificationLine />
-        </div>
-        <div>
-          <QualificationTitle>Computer Science 2</QualificationTitle>
-          <QualificationSubtitle>Poland - Cracow RP</QualificationSubtitle>
-          <QualificationCalendar>
-            <FaCalendarAlt />
-            2000 - 2500
-          </QualificationCalendar>
-        </div>
-      </QualificationData>
+        const isEven: boolean = !!(index % 2);
 
-      <QualificationData>
-        <div>
-          <QualificationTitle>Computer Science 3</QualificationTitle>
-          <QualificationSubtitle>Poland - Cracow RP</QualificationSubtitle>
-          <QualificationCalendar>
-            <FaCalendarAlt />
-            2000 - 2500
-          </QualificationCalendar>
-        </div>
-        <div>
-          <QualificationRounder />
-          <QualificationLine />
-        </div>
-      </QualificationData>
+        return (
+          <QualificationData key={index}>
+            {isEven ? emptyTag : qualificationData}
+            <div>
+              <QualificationRounder />
+              <QualificationLine />
+            </div>
+            {!isEven ? emptyTag : qualificationData}
+          </QualificationData>
+        );
+      })}
     </QualificationContent>
   );
 };

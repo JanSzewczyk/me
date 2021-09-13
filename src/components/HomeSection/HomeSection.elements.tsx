@@ -5,9 +5,10 @@ export const HomeSectionContainer = styled.section`
   justify-content: center;
   align-items: center;
   padding: 0 32px;
-  height: calc(100vh - 80px);
+  height: 100vh;
   position: relative;
   z-index: 1;
+  margin-top: -80px;
 `;
 
 export const HomeBackground = styled.div`
